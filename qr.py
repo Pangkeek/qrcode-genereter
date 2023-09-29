@@ -4,7 +4,8 @@ import tkinter as tk
 
 def makeqr():
     try :
-        img = qrcode.make(text_input)
+        data=text_input.get()
+        img = qrcode.make(data)
         type(img)
         img.save("myqr.png")
         tkinter.messagebox.showinfo('Done','Qr Succesfully downloaded in this folder :D')
